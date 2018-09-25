@@ -1,0 +1,21 @@
+var propTable = [
+    {"id": "01", "properties": { "population": 15, "underConstruction": false } }, 
+    {"id": "02", "properties": { "population": 25, "underConstruction": false } }, 
+    {"id": "03", "properties": { "population": 35, "underConstruction": false } }, 
+    {"id": "04", "properties": { "population": 45, "underConstruction": false } }, 
+    {"id": "05", "properties": { "population": 55, "underConstruction": false } }, 
+    {"id": "06", "properties": { "population": 65, "underConstruction": false } }, 
+    {"id": "07", "properties": { "population": 75, "underConstruction": false } }, 
+    {"id": "08", "properties": { "population": 85, "underConstruction": false } }, 
+    {"id": "09", "properties": { "population": 95, "underConstruction": false } }, 
+    {"id": "10", "properties": { "population": 105, "underConstruction": false } }, 
+    {"id": "11", "properties": { "population": 115, "underConstruction": false } }, 
+    {"id": "12", "properties": { "population": 125, "underConstruction": false } }, 
+    {"id": "13", "properties": { "population": 135, "underConstruction": false } }, 
+    {"id": "14", "properties": { "population": 145, "underConstruction": false } }, 
+    {"id": "15", "properties": { "population": 155, "underConstruction": false } }
+   ]
+;
+
+
+

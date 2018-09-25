@@ -1,0 +1,21 @@
+var propTable = [
+    {"id": "01", "recprops": { "population": 15, "underConstruction": false } }, 
+    {"id": "02", "recprops": { "population": 25, "underConstruction": false } }, 
+    {"id": "03", "recprops": { "population": 35, "underConstruction": false } }, 
+    {"id": "04", "recprops": { "population": 45, "underConstruction": false } }, 
+    {"id": "05", "recprops": { "population": 55, "underConstruction": false } }, 
+    {"id": "06", "recprops": { "population": 65, "underConstruction": false } }, 
+    {"id": "07", "recprops": { "population": 75, "underConstruction": false } }, 
+    {"id": "08", "recprops": { "population": 85, "underConstruction": false } }, 
+    {"id": "09", "recprops": { "population": 95, "underConstruction": false } }, 
+    {"id": "10", "recprops": { "population": 105, "underConstruction": false } }, 
+    {"id": "11", "recprops": { "population": 115, "underConstruction": false } }, 
+    {"id": "12", "recprops": { "population": 125, "underConstruction": false } }, 
+    {"id": "13", "recprops": { "population": 135, "underConstruction": false } }, 
+    {"id": "14", "recprops": { "population": 145, "underConstruction": false } }, 
+    {"id": "15", "recprops": { "population": 155, "underConstruction": false } }
+   ]
+;
+
+
+

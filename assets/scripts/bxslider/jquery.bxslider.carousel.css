@@ -1,0 +1,126 @@
+
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bxsliderCarousel .bx-wrapper .bx-prev {
+    background: url(images/slide-arrow-left.png) no-repeat 0 0; background-size:contain;
+}
+.bxsliderCarousel .bx-wrapper .bx-next {
+    background: url(images/slide-arrow-right.png) no-repeat 0 0; background-size:contain;
+}
+
+.bxsliderCarousel .bx-wrapper .bx-prev { /*left: 10px;*/right: 30px;}
+
+.bxsliderCarousel .bx-wrapper .bx-next { right: 0px; }
+
+.bxsliderCarousel .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 0px;
+	margin-top: -40px;
+	outline: 0;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	z-index: 99;
+}
+
+
+
+
+
+.bxcarousel li {
+    height: 200px !important; 
+	width: 330px !important;
+	overflow:hidden;/**/
+	position:relative; float:left;
+	text-align:center;
+}
+
+.bxcarousel li .carChopa {
+	display: block;
+	width: 200px;
+	height: 200px;
+	border:1px solid #ddd;
+	border-radius: 100%;
+	overflow:hidden !important;
+	margin: auto;
+}
+
+
+.bxcarousel .slide-image .img-full,
+.bxcarousel li img{
+	width : auto;/**/
+	max-width: 400px;
+	height : 100% !important;
+	/*position: absolute;*/
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    margin-top: -25px !important;
+}
+
+.bxcarousel.bxpartners li {
+    height: 70px !important; 
+	width: auto;
+	overflow:hidden;
+	position:relative; float:left;
+	text-align:center;
+}
+
+.bxcarousel.bxpartners li img{
+	width : auto;
+	/*max-width: 200px;*/
+	max-height : 70px !important;
+    margin: 0px auto;
+}
+
+.bxcarousel .slide-image {
+    z-index: 0;
+    position: relative/*absolute*/;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+	overflow:hidden;
+}
+
+.bxcarousel .slide-caption {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    background: url(images/bg_gray.png);
+    height: 104px;
+    color: #fff;
+	padding:10px;
+}
+
+.product-label { font-size: 16px; text-transform:uppercase; display: block; text-align:center;}
+.product-desc { font-size: 13px; color: #999;}
+
+.bxcarousel .slide-image,
+.bxcarousel .slide-caption { width: 100% /*300px*/; }
+
+
+.bxcarousel .slide-caption * {
+	 color: #fff;
+}
+
+.bxcarousel .slide-caption h5 { display: none; }
+.bxcarousel .slide-caption h2 { font-size: 21px; line-height:normal; margin:0; padding:0;  }
+.bxcarousel .slide-caption p { font-size: 12px; line-height:normal; margin:0; padding:0; font-family:helvetica;  }

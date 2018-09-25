@@ -1,0 +1,326 @@
+
+.donut-percent-svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    display: block;
+    height: 148px;
+    margin: 0;
+    width: 148px;
+}
+
+.mg-item__media {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    max-width: 148px;
+    vertical-align: middle;
+    width: 148px;
+}
+
+.donut-percent-svg__base {
+    fill: none;
+    /*stroke: rgba(33,102,172,0.2);*/
+    stroke: #06990d; /*rgba(194, 118, 51,0.2)*/
+    stroke-width: 7.0;
+}
+
+.donut-percent-svg__amount {
+    transition: stroke-dashoffset 1s;
+    fill: none;
+    opacity: 1;
+    stroke-dasharray: 548;
+    stroke-linecap: round;
+    stroke-width: 8.5;
+    stroke: #fff;
+}
+
+.mg-item__media-amount {
+    stroke: #f7f2ea/*06990d*/ /*#67A9CF*/;
+}
+
+.halfdonut .donut-percent-svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    display: block;
+    height: 200px;
+    margin: 0;
+    width: 200px;
+}
+
+.halfdonut .mg-item__media {
+    display: inline-block;
+    height: 200px;
+    margin: 0;
+    max-width: 175px;
+    vertical-align: middle;
+    width: 175px;
+}
+
+.halfdonut .donut-percent-svg__base {
+    fill: none;
+    stroke: #B7B8B8;
+    stroke-width: 25;
+}
+
+.halfdonut .donut-percent-svg__amount {
+    transition: stroke-dashoffset 1s;
+    fill: none;
+    opacity: 1;
+    stroke-dasharray: 502;
+    stroke-linecap: unset;
+    stroke-width: 25;
+    stroke: #fff;
+}
+
+.halfdonut .mg-item__media-amount {
+    stroke: #F89A3D;
+}
+
+.region-content .targets-container {
+    background: #F6F6F6;
+    border-top: 3px solid #DDDDDD;
+    border-bottom: 3px solid #DDDDDD;
+    padding: 45px 0;
+}
+
+.region-content .targets-container .slick-arrow {
+    left: -25px;
+    width: 31px;
+    height: 49px;
+    background: url(/sites/all/themes/pdutheme/images/arrow_left2.png) no-repeat 0 0;
+    margin-top: -24.5px;
+}
+
+.region-content .targets-container .slick-arrow.slick-next {
+    right: -25px;
+    left: auto;
+    background: url(/sites/all/themes/pdutheme/images/arrow_right2.png) no-repeat 0 0;
+}
+
+.targetcard {
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    background: #FFFFFF;
+    position: relative;
+    margin-bottom: 25px;
+	border-radius: 5px;
+}
+
+.targetcard .inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+	padding: 0px /*155px*/;
+	margin-bottom: 0;
+}
+
+.targetcard .cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.targetcard .heading {
+    padding: 5px;
+    display: table-row;
+    height: 110px;
+    position: relative;
+}
+
+.targetcard .heading .cell {
+    padding: 30px 5px 10px;
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: top;
+}
+
+.targetcard .heading h3 {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 13px;
+	font-weight: 500;
+	color: #360/*#75A10C*/;
+}
+
+.targetcard .heading p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.targetcard .heading .tag {
+    /*position: absolute;*/
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-style: normal;
+    text-transform: uppercase;
+    padding: 5px 8px 3px;
+    background-color: #009FDA;
+}
+
+.targetcard .heading .tag span {
+    margin: 0 5px;
+}
+
+.targetcard .img {
+    display: table-row;
+}
+
+.targetcard .img .cell {
+    vertical-align: middle;
+    padding: 20px 0;
+}
+
+.targetcard .img .donut {
+    padding: 0;
+}
+
+.targetcard .img .targetvalue {
+    width: 100%;
+    float: left;
+    margin-top: -110px;
+    font-family: "Andes-Bold";
+}
+
+.targetcard .img .targetvalue .num {
+    font-size: 46px;
+    line-height: 54px;
+    padding-left: 10px;
+}
+
+.targetcard .img .targetvalue .per {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: -4px;
+}
+
+.targetcard .img .targetvalue .prog {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: -8px;
+    display: block;
+}
+
+.targetcard .img img {
+    display: block;
+    margin: 0 auto;
+}
+
+.targetcard .status {
+    background: rgba(237,237,237,0.5) /*#F6F6F6*/;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    display: table;
+    width: 100%;
+    /*position: absolute;*/
+    bottom: 65px;
+    height: 70px;
+}
+
+.targetcard .status .statusbox {
+    border-left: 1px solid #DDDDDD;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 0;
+    width: 33.33%;
+    vertical-align: middle;
+}
+.targetcard .status .statusbox.s50 { width: 50%; }
+
+.targetcard .status .statusbox:first-child {
+    border-left: 0;
+}
+
+.targetcard .status .statusbox strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.targetcard .status .statusbox.statusicon {
+    padding: 45px 0 5px;
+    vertical-align: top;
+    background: url(/sites/all/themes/pdutheme/images/greencircle.png) no-repeat center 15px;
+}
+
+.targetcard .status .statusbox.statusicon.gear {
+    background: url(/sites/all/themes/pdutheme/images/gear.png) no-repeat center 15px;
+}
+
+.targetcard .status .statusbox.statusicon.newcheck {
+    background: url(/sites/all/themes/pdutheme/images/checkmark.png) no-repeat center 15px;
+}
+
+.targetcard .status .status-indicator {
+    padding: 50px 0 0;
+    width: 100%;
+    text-transform: lowercase;
+    display: inline-block;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.targetcard .status .status-indicator.On-Track {
+    background: url(/sites/all/themes/pdutheme/images/status-light.png) no-repeat center 0;
+}
+
+.targetcard .status .status-indicator.Watch {
+    background: url(/sites/all/themes/pdutheme/images/status-light-watch.png) no-repeat center 0;
+}
+
+.targetcard .status .status-indicator.Off-Track {
+    background: url(/sites/all/themes/pdutheme/images/status-light-off.png) no-repeat center 0;
+}
+
+.targetcard .actions {
+    padding: 10px;
+    height: 65px;
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.targetcard .actions div {
+    display: inline-block;
+    margin: 5px 10px 0;
+}
+
+.targetcard .actions div a {
+    display: block;
+    color: #34445F;
+    font-size: 14px;
+    line-height: 20px;
+	text-decoration: none;
+}
+
+.targetcard .actions div a .fa {
+    color: #9B9B9B;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.targetcard .actions div a:hover {
+    text-decoration: none;
+}
+
+.targetcard.subs {
+    background: rgba(255, 229, 87, 0.35);
+    /*background: rgba(206, 230, 237, 0.35);
+    background: rgba(255, 204, 251, 0.35);*/
+}
+
+
+@media (min-width: 1440px) {
+    .container {
+        width:1440px;
+    }
+}

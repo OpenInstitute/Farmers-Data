@@ -1,0 +1,526 @@
+
+
+
+.img-full{
+	width					: 100%;
+	/*height					: 100% !important;*/
+	min-height  			: 100%;
+}
+
+
+.v-center{
+	position				: absolute;
+	/*top						: 55%;
+	transform				: translate(0, -20%);    
+    -webkit-transform		: translate(0, -20%);
+    -moz-transform			: translate(0, -20%);
+    -ms-transform			: translate(0, -20%);*/
+}
+.padding-all{
+	/*padding					: 40px;*/
+}
+
+.line-bottom{
+	padding-bottom			: 10px;
+	position				: relative;
+}
+.line-bottom:after{
+	content					: "";
+	position				: absolute;
+	left					: 50%;
+	bottom					: 0;
+	margin-left				: -20px;
+	width					: 40px;
+	height					: 2px;
+	background-color		: #ffc740;
+}
+.line-bottom.left:after{
+	left					: 0;
+	margin-left				: 0;
+}
+
+.text-space{
+	letter-spacing			: 2px;
+}
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+
+.bx-wrapper {
+	position: relative;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	/*width: 100%;
+	height: 100%;*/
+	display: block;
+	padding: 0; margin:0;
+}
+
+.bx-wrapper .bxslider,
+.bx-wrapper .bxslider li {
+	margin:0; padding:0;
+	position: relative;
+}
+
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*background: #262626;*/
+	margin:0; padding:0;
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+	/*height: 100% !important;*/
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	top: 85%;
+	width: 100%;
+	z-index:51;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: rgba(255,255,255,.4) /*transparent*/;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border:1px solid #000000/*#dadada*/;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover  {background: #ccc;}
+.bx-wrapper .bx-pager.bx-default-pager a.active {background: #F8D5AF;}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next {
+    background: url(images/md-arrow.png) no-repeat 0 0;
+    width: 40px;
+    height: 40px;
+	opacity:0.7;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-next:hover {
+	opacity: 1;
+}
+
+.bx-wrapper .bx-prev {
+	/*left: 10px;*/right: 50px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background-position: -40px 0
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 62%;
+	margin-top: -16px;
+	outline: 0;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	z-index: 99;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	display:none;
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(../img/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+#site-slider { height: 100%;  overflow:hidden; }
+
+#site-slider .slide-caption{
+	position				: absolute;
+	bottom					: 1%;
+	left					: 0;
+	width					: 100%;
+	
+}
+#site-slider.banner_inside .slide-caption { background: none; }
+#site-slider .slide-caption h2{
+	font-size				: 21px;
+	font-weight				: 100;
+	color					: #ee9023;
+	margin					: 10px auto;
+	padding: 0;
+}
+#site-slider .slide-caption h3{
+	color					: #999999;
+	margin-bottom			: 20px;
+}
+#site-slider .slide-caption h5{
+	font-weight				: bold; text-transform:capitalize;
+	color					: #ffc740;
+	font-size: 25px; line-height:normal; 
+}
+#site-slider .slide-caption h5:after{
+	/*left					: 45%;*/
+	width					: 30px;
+	/*margin-left				: 0;*/
+}
+#site-slider .slide-caption .v-center{
+	width					: 100%;
+	background-color:  rgba(0,0,0,0.72);
+	
+}
+
+#site-slider .slide-caption h2,
+#site-slider .slide-caption h3,
+#site-slider .slide-caption h5 {
+/*text-shadow:0 2px #000;*/ font-family:"Ubuntu"; 
+}
+
+
+.bxflex, 
+.bxflex .bx-viewport,
+.bxflex .bxslider li, 
+.bxflex .slide-image{ height: auto; max-height:500px/*350px*/; overflow:hidden ; }
+.bxflex .bxslider li .img-full { height:auto; /*height: 100%;*/ max-height:500px/*350px*/; width:auto; min-width:80%; max-width:100%; margin:0 auto;}
+.bxflex .slide-image { position: relative; overflow:hidden; background: #939393; }
+.bxflex .bx-viewport { height: auto; max-height:500px/*350px*/; overflow:hidden !important;}
+
+.bxflex .slide-caption h2 { font-size: 21px; }
+.bxflex .slide-caption h3 { color:#FFF !important; font-size: 15px; }
+.bxflex .v-center { /*top:auto !important; bottom: 20px; padding:5px 10px !important;*/  }
+
+.bxflex.bxflex-home .slide-caption{
+	position: absolute;
+	bottom: 0; bottom: auto; left: auto; right:auto; 
+	width: 30%; text-align:left;
+}
+
+.bxflex.bxflex-home .v-center {  max-width: 400px; margin:auto; bottom:1%; left:1%; height: 430px; }
+.bxflex.bxflex-home .v-center .wrapper { position:absolute; bottom:1%; left:1%; padding: 20px;  }
+.bxflex.bxflex-home .v-center h5 { font-size: 25px !important; color: #fff !important; text-shadow:0 2px #000; }
+.bxflex.bxflex-home li,
+.bxflex.bxflex-home .slide-image{ /*height:430px;*/ background: none; }
+.bxflex.bxflex-home .bxslider li .img-full { width: 100%; max-height: 430px; }
+.bxflex.bxflex-home,
+.bxflex.bxflex-home .bx-viewport { /*height:430px;*/ }
+
+.bxflex.bxflex-home .v-center h5 , 
+.bxflex.bxflex-home .v-center h2 { max-width: 600px;  }
+
+
+.bxflex.bxflex-home .bx-wrapper .bx-pager {
+	text-align: left;
+    padding-left: 40px;
+	/*font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;*/
+}
+
+.readmore-wrapper {padding: 10px 0 30px !important;}
+.readmore, .readmore:hover {
+    padding: 15px 35px 15px 35px;line-height: 1.2; color: #ffffff !important; border: 2px solid #ffffff;-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 30px; font-weight: 700; font-size: 12px;    
+    position: relative;display: inline-block;vertical-align: top;text-decoration: none;text-transform: uppercase;
+}
+.readmore:hover { background: rgba(255,255,255,0.2); }
+
+.banner_home { position: relative;}	
+.banner_home_intro { position: absolute; top:0; left:0; height:430px; width:0px;  display: none; }
+.banner_home_mask { /*position: absolute; top:0; left:0; height:430px; width:100%; background: #383c4b; opacity: 0.42;*/}
+
+
+
+#site-slider, 
+#site-slider .bx-viewport,
+#site-slider .bxslider li, 
+#site-slider .bxslider li .slide-image{ height: auto; max-height:500px; overflow:hidden ; }
+#site-slider .bxslider li .img-full { height: 100%; max-width: none;  }
+
+
+
+
+.bxflex.bxflex-inner .v-center {  width:auto; margin:auto; bottom:0%; left:0%; padding: 10px; }
+.bxflex.bxflex-inner li,
+.bxflex.bxflex-inner .slide-image{ height:470px !important; background: none; }
+.bxflex.bxflex-inner .bxslider li .img-full { width: 100%; max-height: 470px; }
+.bxflex.bxflex-inner,
+.bxflex.bxflex-inner .bx-viewport { height:470px; }
+
+
+
+@media only screen and (max-width: 985px){
+	.bxflex.bxflex-home,
+	.bxflex.bxflex-home .bx-viewport,/**/
+	.bxflex.bxflex-home li,
+	.bxflex.bxflex-home .slide-image{ height:auto; max-height: 300px;  width:100%; }
+	.bxflex.bxflex-home .bxslider li .img-full { width: 100%; height:auto !important; min-height: 150px; }
+	
+	.bxflex.bxflex-home .slide-caption { width:100%;text-align:left;} 
+	.bxflex.bxflex-home .v-center { left:0; /*top:auto; bottom:0;*/ width:100%;}
+	.bxflex.bxflex-home .slide-caption h5 { font-size:25px !important; }
+	.bxflex.bxflex-home .slide-caption h5:after,
+	.bxflex.bxflex-home .slide-caption h2 { display: none; }
+	.banner_home_intro { display: none}
+}
+
+.bxflex .bx-wrapper .bx-pager,
+.bxflex .bx-wrapper .bx-controls-auto {
+	top: auto; bottom: 0px;
+}
+
+
+#site-slider.banner_inside .bx-wrapper .bx-pager { bottom: 0px; background: #fff; padding-top:5px; }
+
+
+
+.bxboxed, .bxboxed li { list-style:none; margin:0; padding:0; }
+.grid-list .bx-wrapper .bx-prev { left: -40px;}
+.grid-list .bx-wrapper .bx-next { right: -40px;}
+.grid-list .bx-wrapper .bx-controls-direction a { top: 45%;  }
+.bxslider-news .bx-wrapper .bx-pager { top: 91%; text-align: right; text-indent: -9999px; }
+.bxslider-news .bx-wrapper .bx-pager .bx-pager-item { width: 20px; height: 10px; display: inline-block; overflow: hidden; }
+	
+/*
+
+	Theme Name: AGEN - One Page & Multi Page Responsive HTML5 Template
+	Theme URI: http://locotheme.com/agen-html/
+	Description: One Page & Multi Page Responsive HTML5 Template
+	Version: 1.0
+	Author: Loco Theme
+	Author URI: http://www.locotheme.com
+
+	- - - - - Contents - - - - -
+	
+	01 - Max 480px
+	02 - Max 767px
+	03 - Max 991px
+	04 - Max 1024
+	05 - Min 768px
+	06 - Min 992px
+	07 - Min 1200px
+
+	- - - - - - - - - - - - - -
+	
+*/
+
+/*  01 -  Max 480px
+-----------------------------------------------------------*/
+@media (max-width: 480px){
+	#site-slider .slide-caption{
+		text-align				: center;
+	}
+	#site-slider .slide-caption{
+		padding					: 0;
+	}
+	#site-slider .slide-caption .btn{
+		display					: none;
+	}
+	#site-slider .slide-caption .line-bottom:after{
+		left					: 50%;
+		margin-left				: -10px;
+	}
+	#site-slider .bx-pager,
+	#site-slider .bx-controls-auto{
+		bottom					: 10px;
+	}
+}
+
+/*  02 -  Max 767px
+-----------------------------------------------------------*/
+@media (max-width: 767px){
+	#site-slider .slide-caption h2{
+		font-size				: 24px;
+		margin					: 10px 0;
+	}
+	#site-slider .slide-caption h3{
+		margin-bottom			: 20px;
+	}
+	#site-slider .slide-caption h5{
+		margin-bottom			: 0;
+	}
+	#site-slider .slide-caption h3,
+	#site-slider .slide-caption h4{
+		font-size				: 14px;
+	}
+	#site-slider .slide-caption .btn{
+		font-size				: 12px;
+		padding					: 0 10px;
+		height					: 30px;
+		line-height				: 30px;
+	}
+	
+	.bxflex, 
+	.bxflex .bx-viewport,
+	.bxflex .bxslider li, 
+	.bxflex .slide-image{ height:auto; width:100%;}
+	.bxflex .bxslider li .img-full { width:100%;}
+	
+	.grid-list .bx-wrapper .bx-prev { left: -10px;}
+	.grid-list .bx-wrapper .bx-next { right:-10px;}
+}
+
+/*  03 -  Max 991px
+-----------------------------------------------------------*/
+@media (max-width: 991px){
+	
+}
+
+/*  04 -  Max 1024px
+-----------------------------------------------------------*/
+@media (max-width: 1024px){
+	
+}
+
+/*  05 -  Min 768px
+-----------------------------------------------------------*/
+@media (min-width: 768px){
+	
+}
+
+/*  06 -  Min 992px
+-----------------------------------------------------------*/
+@media (min-width: 992px){
+	
+}
+
+/*  07 -  Min 1200px
+-----------------------------------------------------------*/
+@media (min-width: 1200px){
+	.wrapperX,
+	#site-container{
+		width					: 100%;
+		margin					: 0 auto;
+	}
+	#site-slider .wrapper{
+		width					: 100%;
+	}
+	
+}
+#site-slider .slide-caption .wrapper{
+width: 100%;
+margin: 0;
+}
